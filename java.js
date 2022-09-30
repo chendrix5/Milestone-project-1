@@ -20,6 +20,11 @@ let questionList = [
     "Qn3: In the episode where charlie goes on a date and sweats because he ate too much cheese, what does he try to say his job is?"
 ]
 
+let aAnswerList = ["Frankfurt", "Bird", "Janitor" ]
+let bAnswerList = ["shortround", "Denise", "sugar daddy" ]
+let cAnswerList = ["the thumb", "Deecakes", "Philanthropist" ]
+let dAnswerList = ["Wharthog", "The industructable Dee", "Software developer" ]
+
 Quiz.style.display = "none";
 Q1Button.style.display = "none";
 Q2Button.style.display = "none";
@@ -33,6 +38,10 @@ function greeting(){
     Quiz.style.display = "block";
     Q1Button.style.display = "block";
     Question.innerHTML = questionList[iterationNumber];
+    A1.innerHTML = aAnswerList[iterationNumber];
+    A2.innerHTML = bAnswerList[iterationNumber];
+    A3.innerHTML = cAnswerList[iterationNumber];
+    A4.innerHTML = dAnswerList[iterationNumber];
 }
 
 function aFunction(){
@@ -70,14 +79,21 @@ function submitQn1(){
     if (qnChoice == "d"){
         score = score + 1;
     }
-    iterationNumber += 1;
-    Question.innerHTML = questionList[iterationNumber];
     Q1Button.style.display = "none";
     Q2Button.style.display = "block";
+    iterationNumber += 1;
+
+    
     A1.style.color = "White";
     A2.style.color = "white";
     A3.style.color = "White";
     A4.style.color = "White";
+
+Question.innerHTML = questionList[iterationNumber];
+    A1.innerHTML = aAnswerList[iterationNumber];
+    A2.innerHTML = bAnswerList[iterationNumber];
+    A3.innerHTML = cAnswerList[iterationNumber];
+    A4.innerHTML = dAnswerList[iterationNumber];
 }
 
 function submitQn2(){
@@ -85,13 +101,18 @@ function submitQn2(){
         score = score + 1;
     }
     iterationNumber += 1;
-    Question.innerHTML = questionList[iterationNumber];
+   
     Q2Button.style.display = "none";
     Q3Button.style.display = "block";
     A1.style.color = "White";
     A2.style.color = "white";
     A3.style.color = "White";
     A4.style.color = "White";
+    Question.innerHTML = questionList[iterationNumber];
+    A1.innerHTML = aAnswerList[iterationNumber];
+    A2.innerHTML = bAnswerList[iterationNumber];
+    A3.innerHTML = cAnswerList[iterationNumber];
+    A4.innerHTML = dAnswerList[iterationNumber];
 }
 
 function submitQn3(){
@@ -101,9 +122,15 @@ function submitQn3(){
     iterationNumber += 1;
     headerText.innerHTML = "Your score is " + score;
     Quiz.style.display = "none";
+
     A1.style.color = "White";
     A2.style.color = "white";
     A3.style.color = "White";
     A4.style.color = "White";
-    
+
+     Question.innerHTML = questionList[iterationNumber];
+    A1.innerHTML = aAnswerList[iterationNumber];
+    A2.innerHTML = bAnswerList[iterationNumber];
+    A3.innerHTML = cAnswerList[iterationNumber];
+    A4.innerHTML = dAnswerList[iterationNumber];
 }
